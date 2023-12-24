@@ -1,0 +1,28 @@
+function calculateAverage(input1)
+    //do something
+    let average = 0
+    for each number in input1
+        average += number
+    end
+
+    average /= (input1.length)
+    return average
+end
+
+repeat for 10 i
+    log(i + ". Hello!")
+end
+
+
+let numbers = [1, 5, 4, 3]
+
+if (numbers.length > 5)
+    log("YES")
+else
+    log("nooo")
+end
+
+
+let result = (calculateAverage(numbers, "useless parameter"))
+
+log(result)

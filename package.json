@@ -1,0 +1,11 @@
+{
+    "name": "breezescript-compiler",
+    "version": "0.1.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js http://127.0.0.1:5500/main.brze output.js"
+    },
+    "dependencies": {
+        "node-fetch": "^3.3.2"
+    }
+}

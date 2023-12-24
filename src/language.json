@@ -1,0 +1,94 @@
+{
+    "name": "BreezeScript",
+    "assignmentOperators": [
+        "+=",
+        "-=",
+        "/=",
+        "*=",
+        "="
+    ],
+    "operators": [
+        "(",
+        ")",
+        "+",
+        "-",
+        "/",
+        "*"
+    ],
+    "delimiters": [
+        "(",
+        ")",
+        " ",
+        "[",
+        "]",
+        ","
+    ],
+    "keywords": [
+        {
+            "string": "function",
+            "js": "function ${line[1]} ${line.slice(2).join(' ')} {"
+        },
+        {
+            "string": "end",
+            "js": "}"
+        },
+        {
+            "string": "let",
+            "js": "let ${line[1]} = ${line.slice(3).join(' ')};"
+        },
+        {
+            "string": "if",
+            "js": "if (${line.slice(1).join(' ')}) {"
+        },
+        {
+            "string": "else",
+            "js": "} else {"
+        },
+        {
+            "string": "for",
+            "js": "for (let ${line[2]} of ${line[4]}) {",
+            "strict": [
+                "for",
+                "each",
+                "",
+                "in",
+                ""
+            ]
+        },
+        {
+            "string": "repeat",
+            "js": "for (let ${line[3]} = 0; ${line[3]} < ${line[2]}; ${line[3]}++) {",
+            "strict": [
+                "repeat",
+                "for",
+                "",
+                ""
+            ]
+        },
+        {
+            "string": "while",
+            "js": "while (${line.slice(1).join(' ')}) {"
+        },
+        {
+            "string": "return",
+            "js": "return ${line.slice(1).join(' ')}"
+        },
+        {
+            "string": "log",
+            "js": "console.log${line.slice(1).join(' ')}"
+        }
+    ],
+    "expressionOpen": "(",
+    "expressionClose": ")",
+    "commentLine": "//",
+    "expressionKeywords": [
+        {
+            "string": "length of ",
+            "js": "${term[2]}.length"
+        },
+        {
+            "string": "as ",
+            "js": "${term[0]}"
+        }
+    ]
+}
