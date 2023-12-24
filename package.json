@@ -7,5 +7,14 @@
     },
     "dependencies": {
         "node-fetch": "^3.3.2"
-    }
+    },
+    "description": "JavaScript-based language that reads like english",
+    "devDependencies": {},
+    "keywords": [
+        "compiler",
+        "js",
+        "breezescript"
+    ],
+    "author": "luksperks",
+    "license": "Apache-2.0"
 }
