@@ -3,7 +3,7 @@
     "version": "0.1.1",
     "main": "index.js",
     "bin": {
-        "bzc": "index.js"
+        "bzc": "./bin/compiler.js"
     },
     "dependencies": {
         "node-fetch": "^3.3.2"

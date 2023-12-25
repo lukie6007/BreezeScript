@@ -13,7 +13,7 @@
                 "types/*"
             ]
         },
-        "outDir": "./src",
+        "outDir": "./bin",
         "rootDir": "./src"
     },
     "include": [
