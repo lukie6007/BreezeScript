@@ -1,24 +1,12 @@
 // index.js
 
-const { compile } = require('./bin/compiler.js');
-const fs = require('fs').promises; // Using fs.promises for async file operations
+const textarea = document.getElementById('maintext');
 
-async function main() {
-    const [, , src, outputFile] = process.argv;
-
-    if (!src || !outputFile) {
-        console.error('Usage: node index.js <src> <outputFile>');
-        process.exit(1);
-    }
-
-    try {
-        const result = await compile(src);
-        await fs.writeFile(outputFile, result);
-        console.log(`Compilation successful. Result written to ${outputFile}`);
-    } catch (error) {
-        console.error('Error during compilation:', error.message);
-        process.exit(1);
-    }
+if (textarea) {
+    textarea.addEventListener('input', function (event) {
+        const text = textarea.value; // Get the current value of the textarea
+        let code = compile(text);
+        const output = document.getElementById('out');
+        output.innerHTML = code.join('');
+    });
 }
-
-main();

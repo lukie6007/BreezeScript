@@ -1,7 +1,4 @@
-#!/usr/bin/env node
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.compile = void 0;
 const jsoncode = {
     "name": "BreezeScript",
     "assignmentOperators": [
@@ -209,9 +206,9 @@ function compileLine(line, srcLang) {
     }
     return js;
 }
-async function compile(src) {
+function compile(src) {
     let srcLang = jsoncode;
-    const srcCode = await fetchBreezeScriptCode(src);
+    const srcCode = src;
     let output = [];
     let tokenArray = tokenize(srcCode, srcLang.delimiters);
     tokenArray.forEach((line) => {
@@ -221,4 +218,3 @@ async function compile(src) {
     let out = output;
     return out;
 }
-exports.compile = compile;

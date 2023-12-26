@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 
 
 const jsoncode = {
@@ -235,9 +235,9 @@ function compileLine(line: string[] | undefined, srcLang: any) {
 }
 
 
-async function compile(src: string) {
+function compile(src: string) {
     let srcLang = jsoncode
-    const srcCode = await fetchBreezeScriptCode(src)
+    const srcCode = src
 
     let output: string[] = []
     let tokenArray = tokenize(srcCode, srcLang.delimiters)
@@ -249,5 +249,3 @@ async function compile(src: string) {
     let out = output
     return out
 }
-
-export { compile }
