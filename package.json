@@ -1,7 +1,11 @@
 {
     "name": "breezescript-compiler",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "compile": "node index.js http://127.0.0.1:5500/main.brze ./output.js"
+    },
     "bin": {
         "bzc": "./bin/compiler.js"
     },

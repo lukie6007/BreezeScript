@@ -1,6 +1,6 @@
 // index.js
 
-const { compile } = require('./src/compiler.js');
+const { compile } = require('./bin/compiler.js');
 const fs = require('fs').promises; // Using fs.promises for async file operations
 
 async function main() {
