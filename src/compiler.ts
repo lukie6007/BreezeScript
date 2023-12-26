@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+
 const jsoncode = {
     "name": "BreezeScript",
     "assignmentOperators": [
